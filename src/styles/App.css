@@ -33,14 +33,42 @@ body {
   gap: 20px;
   max-width: 300px;
 }
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.ava {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
 .button {
   padding: 15px 30px;
   background-color: #8cd71d;
   border-radius: 15px;
   border: 1px solid #e77272;
+  max-height: 50px;
   &:hover {
     background-color: #b3da78;
   }
+}
+.confetti_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Слой под контентом */
+  pointer-events: none; /* Не блокирует клики */
+  overflow: hidden; /* Предотвращает прокрутку снежинок за пределы окна */
+}
+
+#confetti_canvas {
+  width: 100%;
+  height: 100%;
+  display: block; /* Убирает прокрутку вокруг канваса */
 }
 @media (max-width: 768px) {
   .app {
