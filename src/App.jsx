@@ -6,8 +6,24 @@ import {useEffect} from "react";
 export function App() {
 
     useEffect(() => {
-        frame()
+        frame();
+
+        const handleResize = () => {
+            const canvas = document.getElementById("confetti_canvas");
+            if (canvas) {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+        };
+
+        // Перехватываем событие изменения размеров
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
     }, []);
+
     return (
         <div className='app'>
             <div className="confetti_container"><canvas id="confetti_canvas"></canvas></div>
