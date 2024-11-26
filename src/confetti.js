@@ -1,5 +1,4 @@
 import confetti from 'canvas-confetti';
-
 export function frame() {
     const canvas = document.getElementById('confetti_canvas');
 
@@ -12,7 +11,6 @@ export function frame() {
     // Инициализируем конфетти с использованием канваса
     const confettiInstance = confetti.create(canvas, {
         resize: true, // Канвас изменяет размер при изменении окна
-        // useWorker: true, // Оптимизация с использованием Web Worker
     });
 
     function randomInRange(min, max) {
@@ -24,9 +22,14 @@ export function frame() {
         const ticks = Math.max(200, 500 * (timeLeft / duration));
         skew = Math.max(0.8, skew - 0.001);
 
+        // Настраиваем параметры для мобильных устройств
+        const isMobile = window.innerWidth <= 768; // Примерное определение мобильного устройства
+        const scalar = isMobile ? randomInRange(0.2, 0.5) : randomInRange(0.4, 1); // Размер снежинок
+        const gravity = isMobile ? randomInRange(0.2, 0.4) : randomInRange(0.4, 0.6); // Скорость падения
+
         confettiInstance({
             particleCount: 1,
-            startVelocity: 0,
+            startVelocity: isMobile ? 5 : 0, // Медленнее стартовая скорость на мобильных
             ticks: ticks,
             origin: {
                 x: Math.random(),
@@ -34,18 +37,14 @@ export function frame() {
             },
             colors: ['#ffffff'],
             shapes: ['circle'],
-            gravity: randomInRange(0.4, 0.6),
-            scalar: randomInRange(0.4, 1),
+            gravity: gravity,
+            scalar: scalar,
             drift: randomInRange(-0.4, 0.4),
             disableForReducedMotion: true,
         });
 
-        // if (timeLeft > 0) {
-        //     requestAnimationFrame(animate);
-        // }
-        setTimeout(animate, 100)
+        setTimeout(animate, isMobile ? 200 : 150); // Более редкая анимация на мобильных
     }
 
-    // requestAnimationFrame(animate);
     animate();
 }
