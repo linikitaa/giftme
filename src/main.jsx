@@ -7,6 +7,6 @@ import {AppPlug} from "./AppPlug.jsx";
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/*<App />*/}
-    <AppPlug />
+      <AppPlug/>
   </StrictMode>,
 )
