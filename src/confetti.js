@@ -1,32 +1,19 @@
 import confetti from 'canvas-confetti';
+
 export function frame() {
-    const canvas = document.getElementById('confetti_canvas');
+    const canvasElement= document.getElementById('confetti_canvas');
 
-    if (!canvas) return;
+    if (!canvasElement) return;
 
-    const duration = 15 * 1000;
-    const animationEnd = Date.now() + duration;
     let skew = 1;
-
-    // Инициализируем конфетти с использованием канваса
-    const confettiInstance = confetti.create(canvas, {
-        resize: true, // Канвас изменяет размер при изменении окна
+    const confettiInstance = confetti.create(canvasElement, {
+        resize: true,
     });
-
     function randomInRange(min, max) {
         return Math.random() * (max - min) + min;
     }
 
     function animate() {
-        // const timeLeft = animationEnd - Date.now();
-        // const ticks = Math.max(200, 500 * (timeLeft / duration));
-        // skew = Math.max(0.8, skew - 0.001);
-        //
-        // // Настраиваем параметры для мобильных устройств
-        // const isMobile = window.innerWidth <= 768; // Примерное определение мобильного устройства
-        // const scalar = isMobile ? randomInRange(0.2, 0.5) : randomInRange(0.4, 1); // Размер снежинок
-        // const gravity = isMobile ? randomInRange(0.2, 0.4) : randomInRange(0.4, 0.6); // Скорость падения
-
         confettiInstance({
             particleCount: 1,
             startVelocity: 0,
