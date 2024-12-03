@@ -110,8 +110,8 @@ body {
 }
 
 .ava {
-  height: 110px;
-  min-width: 110px;
+  max-height: 130px;
+  max-width: 130px;
   width: 100%;
   border-radius: 50%;
 }
