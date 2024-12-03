@@ -1,26 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@400;500&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@400;500&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 body {
-  font: 16px/1.4 'Roboto', sans-serif;
-  background: #c24043;
+  font: 16px "Comfortaa", sans-serif;
+  background-color: #092a27;
   min-height: 100vh;
   box-sizing: border-box;
-  color: #8cd71d;
+  color: #e8c9c9;
+  line-height: 1.5;
 }
 
 .app {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 25px;
   max-width: 1080px;
-  margin: 0 auto;
+  margin: 0 auto 50px;
+
 }
+
+.snake {
+  height: 500px;
+  max-width: 500px;
+  width: 100%;
+  background: center / contain no-repeat url("../assets/snake.png");
+
+  margin-bottom: 50px;
+}
+
 .info {
   margin: 0 auto;
+  max-width: 500px;
 }
+
 .title {
-  font-size: 20px;
-  margin: 40px 0;
+  font-family: "Great Vibes", cursive;
+  line-height: 1;
+  font-size: 55px;
+  margin: 40px 0 20px 0;
   text-align: center;
 }
 .subtitle {
@@ -31,28 +50,83 @@ body {
   flex-direction: column;
   margin: 0 auto;
   gap: 20px;
-  max-width: 300px;
+
 }
 .item {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  padding: 15px 10px;
+  background-color: rgba(35, 133, 148, 0.2);
+
+  border-radius: 15px;
+  border-top: 1px double #333;
+  border-bottom: 1px double #333;
+}
+
+.item_name {
+  line-height: 1.2;
+}
+.item_first {
+  font-size: 16px;
+
+}
+.item_second {
+  font-size: 11px;
+}
+.link {
+  color: #092a27;
+  text-decoration: none;
+  font-weight: bold;
 }
 .contacts {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  gap: 10px;
 }
 .contact {
+  width: 35px;
+  height: 35px;
+}
+
+.link_for_sign {
+  position: relative;
+
+  background-color: #25d366;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 15px;
+  padding: 15px;
+  border: none;
+}
+.contact_wapp {
   width: 30px;
   height: 30px;
+
+  position: absolute;
+  top: 7px;
+  right: 0;
 }
+
 .ava {
-  width: 80px;
-  height: 80px;
+  height: 130px;
+  min-width: 130px;
+  width: 100%;
   border-radius: 50%;
 }
+.item_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.item_right {
+  text-align: center;
+
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
 .button {
   padding: 15px 30px;
   background-color: #8cd71d;
@@ -82,13 +156,36 @@ body {
   height: 100%;
   display: block; /* Убирает прокрутку вокруг канваса */
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .app {
     margin: 20px 20px;
   }
 }
 
+.marquee {
+  width: 100%; /* Ширина контейнера */
+  overflow: hidden; /* Прячем содержимое за пределами контейнера */
+  white-space: nowrap; /* Не переносим текст на новую строку */
+  box-sizing: border-box;
+  padding: 10px; /* Внутренний отступ */
+  position: relative;
+  color: #e8cb82;
+}
 
+#marquee-content {
+  display: inline-block; /* Текст внутри строки */
+  position: relative;
+  animation: marquee 10s linear infinite; /* Анимация */
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%); /* Начинаем справа */
+  }
+  to {
+    transform: translateX(-100%); /* Заканчиваем слева */
+  }
+}
 .appPlug {
   text-align: center;
   margin: 50px auto;
