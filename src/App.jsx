@@ -5,6 +5,7 @@ import siu from './assets/photos/siu.jpg';
 import anast from './assets/photos/anast.jpg'
 import elena from './assets/photos/elena.jpg'
 import ang from './assets/photos/ang.jpg'
+import icontree from './assets/icon.svg'
 import tg from './assets/tg.svg'
 import {frame} from "./confetti.js";
 import {useEffect} from "react";
@@ -39,10 +40,10 @@ export function App() {
                 </h1>
 
                 <div className={'snake'}></div>
-                <p className={'subtitle'}>Ниже указаны мастера, с которыми Вы можете проконсультироваться, и записаться на процедуры.
-                    Также Вы можете предложить своим близким сходить по данному купону.
-                    <br/>Важно всегда брать его с собой ❣️
-                    Укажите слово «купон» при записи
+                <p className={'subtitle'}>Ниже карточки мастеров, с которыми Вы можете проконсультироваться, и записаться на процедуры.
+                    Ваши близкие также могут воспользоваться данным купоном.
+                    Важно всегда брать его с собой.❣️
+                    <br/>Укажите слово «купон» при записи.
                 </p>
                 <br/>
                 <div className="marquee">
@@ -86,7 +87,7 @@ export function App() {
                             </div>
                         </div>
                         <div className={'item_right'}>
-                            <p>Эко-завивка или «прикорневой объем» + стрижка</p>
+                            <p className={'item_text'}>Эко-завивка или «прикорневой объем» + стрижка</p>
                             <button className={'link_for_sign'}>
                                 <a className={'link'} href={'https://wa.me/79265955117'}>
                                     Записаться
@@ -154,6 +155,7 @@ export function App() {
                     </div>
 
                 </div>
+                <p className={'title'}>Счастливого Нового года <img className={'iconTree'} src={icontree} alt=""/></p>
 
             </div>
         </div>
