@@ -1,7 +1,7 @@
 import './styles/App.css'
 import inst from './assets/inst.svg'
 import wapp from './assets/wapp.svg'
-import siu from './assets/photos/siu.jpg'
+import siu from './assets/photos/siu.jpg';
 import anast from './assets/photos/anast.jpg'
 import elena from './assets/photos/elena.jpg'
 import ang from './assets/photos/ang.jpg'
@@ -86,14 +86,17 @@ export function App() {
                             </div>
                         </div>
                         <div className={'item_right'}>
-                            <p>Эко-завивка или «прикорневой объем» +стрижка</p>
+                            <p>Spa программа «Счастье для волос»</p>
                             <button className={'link_for_sign'}>
                                 <a className={'link'} href={'https://wa.me/79265955117'}>
                                     Записаться
                                     <img className={'contact_wapp'} src={wapp} alt={'wapp'}/>
-                                </a></button>
+                                </a>
+
+
+                            </button>
+
                             <div className={'contacts'}>
-                                {/*<img className={'contact'} src={wapp} alt={'wapp'}/>*/}
                                 <a href="https://www.instagram.com/color_angie?igsh=MTdnNWN3NmxiY2I2cw==">
                                     <img className={'contact'} src={inst} alt={'inst'}/></a>
                             </div>
@@ -109,14 +112,17 @@ export function App() {
                             </div>
                         </div>
                         <div className={'item_right'}>
-                            <p>Spa программа или маникюр с покрытием</p>
+                            <p>Spa программа «Счастье для волос»</p>
                             <button className={'link_for_sign'}>
                                 <a className={'link'} href={'https://wa.me/79778577388'}>
                                     Записаться
                                     <img className={'contact_wapp'} src={wapp} alt={'wapp'}/>
-                                </a></button>
+                                </a>
+
+
+                            </button>
+
                             <div className={'contacts'}>
-                                {/*<img className={'contact'} src={wapp} alt={'wapp'}/>*/}
                                 <a href="https://www.instagram.com/aksi.nails1?igsh=Nno4OGY1MGIxMjdp">
                                     <img className={'contact'} src={inst} alt={'inst'}/></a>
                             </div>
@@ -132,16 +138,18 @@ export function App() {
                         </div>
                     </div>
                     <div className={'item_right'}>
-                        <p>Уходовые процедуры для лица</p>
+                        <p>Spa программа «Счастье для волос»</p>
                         <button className={'link_for_sign'}>
                             <a className={'link'} href={'https://wa.me/79150553440'}>
                                 Записаться
                                 <img className={'contact_wapp'} src={wapp} alt={'wapp'}/>
-                            </a></button>
+                            </a>
+
+
+                        </button>
+
                         <div className={'contacts'}>
-
                             <a href={'https://t.me/marossskina'}><img className={'contact'} src={tg} alt={'tg'}/></a>
-
                         </div>
                     </div>
 
@@ -152,10 +160,3 @@ export function App() {
     )
 }
 
-// export function App() {
-//     return (
-//         <div className={'appPlug'}>
-//             В разработке!
-//         </div>
-//     );
-// }

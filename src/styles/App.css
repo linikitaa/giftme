@@ -54,8 +54,10 @@ body {
 }
 .item {
   display: flex;
+  justify-content: space-between;
   padding: 15px 10px;
   background-color: rgba(35, 133, 148, 0.2);
+  max-width: 500px;
 
   border-radius: 15px;
   border-top: 1px double #333;
@@ -70,7 +72,7 @@ body {
 
 }
 .item_second {
-  font-size: 11px;
+  font-size: 9px;
 }
 .link {
   color: #092a27;
@@ -91,11 +93,12 @@ body {
   position: relative;
 
   background-color: #25d366;
-  max-width: 300px;
-  width: 100%;
   border-radius: 15px;
   padding: 15px;
   border: none;
+
+  max-width: 250px;
+  width: 100%;
 }
 .contact_wapp {
   width: 30px;
@@ -107,8 +110,8 @@ body {
 }
 
 .ava {
-  height: 130px;
-  min-width: 130px;
+  height: 110px;
+  min-width: 110px;
   width: 100%;
   border-radius: 50%;
 }
@@ -119,24 +122,14 @@ body {
 }
 .item_right {
   text-align: center;
-
   padding: 0 10px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   gap: 10px;
 }
 
-.button {
-  padding: 15px 30px;
-  background-color: #8cd71d;
-  border-radius: 15px;
-  border: 1px solid #e77272;
-  max-height: 50px;
-  &:hover {
-    background-color: #b3da78;
-  }
-}
 .confetti_container {
   position: fixed;
   top: 0;
