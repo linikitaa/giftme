@@ -1,14 +1,11 @@
 import './styles/App.css'
-import icon from './assets/icon.svg'
 import inst from './assets/inst.svg'
 import wapp from './assets/wapp.svg'
-import ava from './assets/ava.webp'
 import siu from './assets/photos/siu.jpg'
 import anast from './assets/photos/anast.jpg'
 import elena from './assets/photos/elena.jpg'
 import ang from './assets/photos/ang.jpg'
 import tg from './assets/tg.svg'
-import snake from './assets/snake.png'
 import {frame} from "./confetti.js";
 import {useEffect} from "react";
 
