@@ -86,7 +86,7 @@ export function App() {
                             </div>
                         </div>
                         <div className={'item_right'}>
-                            <p>Spa программа «Счастье для волос»</p>
+                            <p>Эко-завивка или «прикорневой объем» + стрижка</p>
                             <button className={'link_for_sign'}>
                                 <a className={'link'} href={'https://wa.me/79265955117'}>
                                     Записаться
@@ -112,7 +112,7 @@ export function App() {
                             </div>
                         </div>
                         <div className={'item_right'}>
-                            <p>Spa программа «Счастье для волос»</p>
+                            <p>Spa программа или маникюр с покрытием</p>
                             <button className={'link_for_sign'}>
                                 <a className={'link'} href={'https://wa.me/79778577388'}>
                                     Записаться
@@ -138,7 +138,7 @@ export function App() {
                         </div>
                     </div>
                     <div className={'item_right'}>
-                        <p>Spa программа «Счастье для волос»</p>
+                        <p>Уходовые процедуры для лица</p>
                         <button className={'link_for_sign'}>
                             <a className={'link'} href={'https://wa.me/79150553440'}>
                                 Записаться
