@@ -98,7 +98,7 @@ export function App() {
                             </button>
 
                             <div className={'contacts'}>
-                                <a href="https://www.instagram.com/color_angie?igsh=MTdnNWN3NmxiY2I2cw==">
+                                <a href="https://www.instagram.com/colorisue?igsh=aGpqNnhsYXM3b3Np">
                                     <img className={'contact'} src={inst} alt={'inst'}/></a>
                             </div>
                         </div>
