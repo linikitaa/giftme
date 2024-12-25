@@ -47,7 +47,7 @@ export function App() {
                 </p>
                 <br/>
                 <div className="marquee">
-                    <span id="marquee-content">Купон действует с 1.01.25 по 30.02.25</span>
+                    <span id="marquee-content">Купон действует с 1.01.25 по 28.02.25</span>
                 </div>
             </div>
             <div className={'items'}>
